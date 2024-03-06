@@ -307,7 +307,7 @@ index fb7efa87c..5fd170d18 100755
 -                     
 -            self.cmd.compile(['madevent'], cwd=Pdir)
 +
-+            cudacpp_backend = self.run_card['cudacpp_backend'] # the default value is defined in banner.py
++            cudacpp_backend = self.run_card['cudacpp_backend'].upper() # the default value is defined in banner.py
 +            logger.info("Building madevent in madevent_interface.py with '%s' matrix elements"%cudacpp_backend)
 +            if cudacpp_backend == 'FORTRAN':
 +                self.cmd.compile(['madevent_fortran_link'], cwd=Pdir)
@@ -334,7 +334,7 @@ index 8c509e83f..cb6bf4ca5 100755
 -                    self.compile(['madevent'], cwd=Pdir)
 -                    
 +
-+                    cudacpp_backend = self.run_card['cudacpp_backend'] # the default value is defined in banner.py
++                    cudacpp_backend = self.run_card['cudacpp_backend'].upper() # the default value is defined in banner.py
 +                    logger.info("Building madevent in madevent_interface.py with '%s' matrix elements"%cudacpp_backend)
 +                    if cudacpp_backend == 'FORTRAN':
 +                        self.compile(['madevent_fortran_link'], cwd=Pdir)
